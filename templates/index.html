@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Туристическое агентство</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .full-width-header {
+            width: 100%;
+            padding: 20px 0;
+            background-color: #343a40; /* Темно-серый фон */
+            color: white; /* Белый текст */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="full-width-header mb-5">
+        <h1>Добро пожаловать в наше туристическое агентство!</h1>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            {% for tour in tours %}
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="{{ tour.image_path }}" class="card-img-top" alt="{{ tour.name }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ tour.name }}</h5>
+                            <p class="card-text">{{ tour.description }}</p>
+                            <a href="{{ url_for('tour', tour_id=tour.id) }}" class="btn btn-primary">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <!-- Заголовок и кнопка Telegram после списка туров -->
+        <div class="text-center mt-5 mb-5">
+            <h3>Связь с нами</h3>
+            <a href="https://t.me/moscow" target="_blank" class="btn btn-primary mt-3">Телеграм</a>
+        </div>
+    </div>
+</body>
+</html>

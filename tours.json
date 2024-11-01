@@ -1,0 +1,32 @@
+[
+    {
+      "id": 1,
+      "name": "Экскурсия в Париж",
+      "description": "Незабываемое путешествие в город любви.",
+      "image_path": "/static/images/paris.png"
+    },
+    {
+      "id": 2,
+      "name": "Отдых на Бали",
+      "description": "Тропический рай с белоснежными пляжами.",
+      "image_path": "/static/images/bali.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Сафари в Африке",
+      "description": "Ощутите красоты Африки и незабываемыми видами.",
+      "image_path": "/static/images/africa.png"
+    },
+    {
+      "id": 4,
+      "name": "Путешествие в Рим",
+      "description": "Исторические достопримечательности и богатая культура ждут вас.",
+      "image_path": "/static/images/rim.png"
+    },
+    {
+      "id": 5,
+      "name": "Экскурсия по Москве",
+      "description": "Откройте для себя столицу России и ее уникальные достопримечательности.",
+      "image_path": "/static/images/moscow.jpg"
+    }
+  ]
