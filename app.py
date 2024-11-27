@@ -3,9 +3,12 @@ import json
 
 app = Flask(__name__)
 
-# Загрузка туров из JSON-файла
-with open("tours.json") as f:
+
+with open("tours.json", encoding="utf-8") as f:
     tours = json.load(f)
+    
+# with open("tours.json") as f:
+#     tours = json.load(f)
 
 @app.route('/')
 def index():
@@ -28,7 +31,6 @@ def book():
     tour = next((t for t in tours if str(t["id"]) == tour_id), None)
     
     if tour:
-        # Подтверждение бронирования и отображение страницы подтверждения
         return render_template("confirmation.html", name=name, tour=tour)
     return "Booking failed", 400
 
